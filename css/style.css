@@ -1,0 +1,146 @@
+.conteiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    row-gap: 50px;
+    padding: 0 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 25px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.header-item,
+.footer-item {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: auto;
+}
+
+.header-item {
+    grid-column: span 1;
+    display: flex;
+    background-color: rgb(222, 16, 16);
+    height: 120px;
+}
+
+.header-item img {
+    width: 40%;
+    height: auto;
+    max-width: 60px;
+    align-items: center;
+}
+
+.div-item {
+    background-color: #fff;
+    height: 400px;
+    width: 90%;
+    border-radius: 12px;
+    border: 2px solid #000;
+    margin: 0 auto;
+}
+.div-item:hover{
+    transform: scale(1.07);
+}
+
+.footer-item {
+    grid-column: span 1;
+    background-color: #0a0c10;
+    height: 600px;
+}
+.nome-prod, .preco-prod{
+    text-align: center;
+}
+.nome-prod{
+    font-size: 22px;
+}
+.preco-prod{
+    color: #76f500;
+    font-weight: bold;
+    font-size: 18px;
+}
+.img-prod{
+    display: block;
+    width: 80%;
+    max-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+.botao-prod{
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 0;
+    background-color: rgb(255, 251, 13);
+}
+.botao-prod:hover{
+    transform: scale(1.08);
+}
+@media (min-width: 768px) {
+    .conteiner {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 30px;
+    }
+
+    .header-item,
+    .footer-item {
+        margin-left: -30px;
+        margin-right: -30px;
+        width: auto;
+    }
+
+    .header-item {
+        grid-column: span 2;
+    }
+
+    .footer-item {
+        grid-column: span 2;
+    }
+    .img-prod{
+    max-height: 140px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .conteiner {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 60px;
+    }
+
+    .header-item {
+        grid-column: span 4;
+    }
+
+    .header-item img {
+        max-width: 120px;
+    }
+
+    .footer-item {
+        grid-column: span 4;
+    }
+
+    .header-item,
+    .footer-item {
+        margin-left: -60px;
+        margin-right: -60px;
+        width: auto;
+    }
+    .img-prod{
+        width: 80%;
+        max-height: 150px;
+    }
+}
